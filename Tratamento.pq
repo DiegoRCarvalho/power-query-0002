@@ -3,6 +3,9 @@ let
     Fonte = Pdf.Tables(File.Contents("Z:\certificacao\ETL\power-query-0002\LISTA DE RESULTADO GERAL.pdf"), [Implementation="1.3"]),
 
     // Mantém apenas os objetos que são do tipo "Table"
-    SelecionarApenasTabelas = Table.SelectRows(Fonte, each ([Kind] = "Table"))
+    SelecionarApenasTabelas = Table.SelectRows(Fonte, each ([Kind] = "Table")),
+
+    // Remove colunas auxiliares que não serão usadas (Id e Kind)
+    RemoverColunasDesnecessarias = Table.RemoveColumns(SelecionarApenasTabelas,{"Id", "Kind"})
 in
-  SelecionarApenasTabelas
+  RemoverColunasDesnecessarias

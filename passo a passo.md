@@ -12,6 +12,11 @@
   
     ![](img/0007.png)
 
-4. Mantém apenas os objetos que são do tipo "Table"
+4. Manter apenas os objetos que são do tipo "Table"
 
     ![](img/0008.png)
+
+
+5. Remover colunas auxiliares que não serão usadas (Id e Kind)
+
+    ![](img/0009.png)
