@@ -25,3 +25,7 @@
 6. Expandir o conteúdo das tabelas
 
     ![](img/0010.png)
+
+7. Remover linhas desnecessárias
+
+    ![](img/0011.png)
