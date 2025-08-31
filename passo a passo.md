@@ -61,3 +61,7 @@
 15. Remove linhas residuais
 
     ![](img/0019.png)
+
+15. Tipar colunas
+
+    ![](img/0020.png)

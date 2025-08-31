@@ -75,7 +75,24 @@ let
     RemoverLinhasExperienciaProfissional = Table.SelectRows(
         ColunasRenomeadas, 
         each not Text.Contains([#"Experiência Profissional"], "EXPERIÊNCIA")
+    ),
+
+        // Define o tipo de cada coluna (texto, número, inteiro etc.)
+    TipoAlterado = Table.TransformColumnTypes(
+        RemoverLinhasExperienciaProfissional,{
+            {"Página", type text}, 
+            {"Classificação", Int64.Type}, 
+            {"Inscrição", Int64.Type}, 
+            {"Nome", type text}, 
+            {"Sobrenome", type text}, 
+            {"Idoso", type text}, 
+            {"Experiência Profissional", type text}, 
+            {"Formação Profissional", type text}, 
+            {"Idade", type number}, 
+            {"Jurado", type text}, 
+            {"Total", Int64.Type}
+        }
     )
     
 in
-  RemoverLinhasExperienciaProfissional
+  TipoAlterado
