@@ -45,3 +45,9 @@
 11. Remover coluna indesejada
 
     ![](img/0015.png)
+
+12. Colocar apenas a primeira letra do nome em maiúsculo
+
+    ![](img/0016.png)
+
+

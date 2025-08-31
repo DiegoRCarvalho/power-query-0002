@@ -40,7 +40,10 @@ let
     ),
 
     // Remove a primeira parte ("Table001...") e mantém apenas a numeração da página
-    RemoverColunasDesnecessarias2 = Table.RemoveColumns(ValorSubstituido,{"Table001 (Page 1).1"})
+    RemoverColunasDesnecessarias2 = Table.RemoveColumns(ValorSubstituido,{"Table001 (Page 1).1"}),
+
+    // Coloca cada palavra do campo NOME com inicial maiúscula
+    ColocarCadaPalavraEmMaiuscula = Table.TransformColumns(RemoverColunasDesnecessarias2,{{"NOME", Text.Proper, type text}}),
 
 in
-  RemoverColunasDesnecessarias2
+  ColocarCadaPalavraEmMaiuscula
