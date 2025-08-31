@@ -20,3 +20,8 @@
 5. Remover colunas auxiliares que não serão usadas (Id e Kind)
 
     ![](img/0009.png)
+
+
+6. Expandir o conteúdo das tabelas
+
+    ![](img/0010.png)
