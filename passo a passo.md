@@ -69,3 +69,7 @@
 17. Criar coluna com a idade arredondada
 
     ![](img/0021.png)
+
+18. Criar coluna faixa etária
+
+    ![](img/0022.png)

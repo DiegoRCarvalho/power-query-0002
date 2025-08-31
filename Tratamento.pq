@@ -100,7 +100,18 @@ let
         "Idade Arredondada",
         each Number.RoundUp([Idade], 0),
         Int64.Type
+    ),
+
+    // Cria nova coluna categorizando a idade em faixas etárias
+    AddColunaFaixaEtaria = Table.AddColumn(
+        AddColunaIdadeArredondada, 
+        "Faixa Etária", 
+        each if [Idade Arredondada] <= 30 then "18 a 30 anos" 
+        else if [Idade Arredondada] <= 40 then "31 a 40 anos" 
+        else if [Idade Arredondada] <= 50 then "41 a 50 anos" 
+        else if [Idade] <= 60 then "51 a 60 anos" 
+        else "Acima de 60 anos"
     )
-    
 in
-  AddColunaIdadeArredondada
+    // Resultado final da query
+    AddColunaFaixaEtaria
