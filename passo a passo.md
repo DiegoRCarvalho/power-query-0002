@@ -53,3 +53,7 @@
 13. Separar nome e sobrenome
 
     ![](img/0017.png)
+
+14. Renomear as colunas
+
+    ![](img/0018.png)

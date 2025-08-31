@@ -52,7 +52,24 @@ let
         "NOME", 
         Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), 
         {"NOME.1", "NOME.2"}
+    ),
+
+    // Renomeia colunas para títulos mais claros
+    ColunasRenomeadas = Table.RenameColumns(
+        DividirColunaPorDelimitador2,{
+            {"Table001 (Page 1).2", "Página"}, 
+            {"CLAS.", "Classificação"}, 
+            {"INSCRIÇÃO", "Inscrição"}, 
+            {"NOME.1", "Nome"},
+            {"NOME.2", "Sobrenome"}, 
+            {"IDOSO", "Idoso"}, 
+            {"EXPERIÊNCIA#(lf)PROFISSIONAL", "Experiência Profissional"}, 
+            {"FORMAÇÃO#(lf)PROFISSIONAL", "Formação Profissional"}, 
+            {"IDADE", "Idade"}, 
+            {"JURADO", "Jurado"}, 
+            {"TOTAL", "Total"}
+        }
     )
-    
+
 in
-  DividirColunaPorDelimitador2
+  ColunasRenomeadas
