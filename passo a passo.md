@@ -62,6 +62,10 @@
 
     ![](img/0019.png)
 
-15. Tipar colunas
+16. Tipar colunas
 
     ![](img/0020.png)
+
+17. Criar coluna com a idade arredondada
+
+    ![](img/0021.png)

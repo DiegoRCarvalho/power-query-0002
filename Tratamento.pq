@@ -92,7 +92,15 @@ let
             {"Jurado", type text}, 
             {"Total", Int64.Type}
         }
+    ),
+
+    // Cria nova coluna com a idade arredondada para cima
+    AddColunaIdadeArredondada = Table.AddColumn(
+        TipoAlterado,
+        "Idade Arredondada",
+        each Number.RoundUp([Idade], 0),
+        Int64.Type
     )
     
 in
-  TipoAlterado
+  AddColunaIdadeArredondada
