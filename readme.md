@@ -29,6 +29,7 @@ power-query-0002/
 │
 ├── Tratamento.pq            ← Código M utilizado no Power Query para criar uma função com as etapas necessárias ao tratamento de dados.
 ├── Resultado.xlsx           ← Planilha contendo a tabela tratada.
+├── passo a passo.md         ← Arquivo contendo as etapas realizadas de forma gráfica.
 └── README.md
 ```
 
