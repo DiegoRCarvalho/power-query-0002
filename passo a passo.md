@@ -34,6 +34,10 @@
 
     ![](img/0012.png)
 
-8. Dividir a coluna 
+9. Dividir a coluna 
 
     ![](img/0013.png)
+
+10. Remover caractere indesejado
+
+    ![](img/0014.png)

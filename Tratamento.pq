@@ -30,7 +30,14 @@ let
         "Table001 (Page 1)", 
         Splitter.SplitTextByDelimiter("(", QuoteStyle.Csv), 
         {"Table001 (Page 1).1", "Table001 (Page 1).2"}
+    ),
+
+    // Remove o caractere “)” que sobra na parte da coluna com a página
+    ValorSubstituido = Table.ReplaceValue(
+        DividirColunaPorDelimitador,
+        ")","",
+        Replacer.ReplaceText,{"Table001 (Page 1).2"}
     )
 
 in
-  DividirColunaPorDelimitador
+  ValorSubstituido
