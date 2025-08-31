@@ -41,3 +41,7 @@
 10. Remover caractere indesejado
 
     ![](img/0014.png)
+
+11. Remover coluna indesejada
+
+    ![](img/0015.png)

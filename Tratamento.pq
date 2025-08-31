@@ -37,7 +37,10 @@ let
         DividirColunaPorDelimitador,
         ")","",
         Replacer.ReplaceText,{"Table001 (Page 1).2"}
-    )
+    ),
+
+    // Remove a primeira parte ("Table001...") e mantém apenas a numeração da página
+    RemoverColunasDesnecessarias2 = Table.RemoveColumns(ValorSubstituido,{"Table001 (Page 1).1"})
 
 in
-  ValorSubstituido
+  RemoverColunasDesnecessarias2
