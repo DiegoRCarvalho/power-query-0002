@@ -57,3 +57,7 @@
 14. Renomear as colunas
 
     ![](img/0018.png)
+
+15. Remove linhas residuais
+
+    ![](img/0019.png)

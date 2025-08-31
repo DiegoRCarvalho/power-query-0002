@@ -69,7 +69,13 @@ let
             {"JURADO", "Jurado"}, 
             {"TOTAL", "Total"}
         }
-    )
+    ),
 
+    // Remove linhas residuais que ainda repetem cabeçalhos (como “EXPERIÊNCIA PROFISSIONAL”)
+    RemoverLinhasExperienciaProfissional = Table.SelectRows(
+        ColunasRenomeadas, 
+        each not Text.Contains([#"Experiência Profissional"], "EXPERIÊNCIA")
+    )
+    
 in
-  ColunasRenomeadas
+  RemoverLinhasExperienciaProfissional
