@@ -33,3 +33,7 @@
 8. Usar a primeira linha de dados como cabeçalho da tabela
 
     ![](img/0012.png)
+
+8. Dividir a coluna 
+
+    ![](img/0013.png)
