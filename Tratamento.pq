@@ -45,5 +45,14 @@ let
     // Coloca cada palavra do campo NOME com inicial maiúscula
     ColocarCadaPalavraEmMaiuscula = Table.TransformColumns(RemoverColunasDesnecessarias2,{{"NOME", Text.Proper, type text}}),
 
+
+    // Divide a coluna NOME em duas: Nome e Sobrenome (separador = espaço)
+    DividirColunaPorDelimitador2 = Table.SplitColumn(
+        ColocarCadaPalavraEmMaiuscula, 
+        "NOME", 
+        Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), 
+        {"NOME.1", "NOME.2"}
+    )
+    
 in
-  ColocarCadaPalavraEmMaiuscula
+  DividirColunaPorDelimitador2
