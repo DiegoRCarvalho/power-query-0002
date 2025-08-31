@@ -29,3 +29,7 @@
 7. Remover linhas desnecessárias
 
     ![](img/0011.png)
+
+8. Usar a primeira linha de dados como cabeçalho da tabela
+
+    ![](img/0012.png)
